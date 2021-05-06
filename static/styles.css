@@ -1,0 +1,311 @@
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700|Roboto+Condensed:400,700');
+
+body {
+	font-family: "Roboto Condensed", "Fira Sans Condensed", Futura, Verdana, sans-serif;
+	padding-bottom: 40px;
+}
+
+form {
+	background-color: #efefef;
+	padding: 10px;
+	margin-right: 10px;
+	text-align: center;
+	width: 100%;
+	height: 75px;
+}
+form label {
+	padding-left: 5px;
+}
+form .message {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0;
+}
+form .message#logo {
+	text-align: right;
+	margin: 2px 50px 0 0;
+	width: 125px;
+	font-size: 1.5em;
+	padding-right: 20px;
+	vertical-align: top;
+}
+form .message#logo big {
+	background-color: 343;
+	padding: 2px 4px;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.33em;
+}
+form .message#logo small {
+	position: absolute;
+	margin-top: -2px;
+	color: black;
+	background-color: yellow;
+	padding: 0 5px;
+}
+form #menu {
+	display: inline-block;
+}
+form .message#output {
+	text-align: left;
+	display: block;
+	margin: 10px 0 0 -5px;
+}
+form .message#output big {
+	margin-left: 5px;
+}
+form .message#output span {
+	display: inline-block;
+	background-color: #787;
+	color: white;
+	padding: 2px 4px;
+	margin: 0 10px 0 0;
+	white-space: nowrap;
+	border-radius: 5px;
+}
+
+form #options {
+	display: inline-block;
+	background-color: #dedede;
+	padding: 5px 10px 5px 5px;
+	border-radius: 5px;
+}
+form #options select, 
+form #options input {
+	max-width: 85px;
+	border: 0;
+	border-radius: 0;
+	padding: 2px;
+}
+form #options input[type=number] {
+	width: 40px;
+}
+form #options input[type=button] {
+	margin-left: 5px;
+}
+form #options input[type=button], 
+form #options input[type=reset] {
+	color: white;
+	background-color: black;
+	padding: 5px;
+}
+form #options input[type=checkbox] {
+	/*top: 2px;*/
+	position: relative;
+}
+
+table {
+	margin: 60px auto 20px;
+	border-collapse: collapse;
+}
+table tr td:first-child {
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	border-left: 0 !important;
+	box-shadow: none !important;
+	background-color: inherit;
+}
+/*
+table tr:last-child td {
+	border-bottom-width: 2px !important;
+}
+*/
+table tr:first-child td,
+table tr:last-child td {
+	border-bottom-width: 0;
+	height: 10px;
+	border-top-width: 0;
+}
+table tr:first-child td {
+	height: 8px;
+}
+table td {
+	min-width: 40px;
+	height: 40px;
+	border: 2px solid black;
+	text-align: center;
+	background-color: sienna;
+	box-shadow: 0 0 4px black;
+	border-right-color: white;
+	border-left-color: white;
+}
+
+table td > span {
+	display: block;
+	position: relative;
+	position: relative;
+	top: -35px;
+	margin-bottom: -40px;
+}
+table td a {
+	color: black;
+	background-color: #cdcdcd;
+	border-radius: 50px;
+	border: 1px solid black;
+	padding: 5px;
+	position: relative;
+	top: 20px;
+	text-decoration: none;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	box-shadow: 1px 1px 2px black;
+}
+
+table td a span:first-child {
+	position: relative;
+	left: -40px;
+}
+table td a span:last-child {
+	position: absolute;
+	left: 11px;
+}
+table tr:first-child td a {
+	top: 16px;
+}
+/*table tr:first-child td:first-child a {
+	top: 15px;
+}*/
+table tr td:first-child a span {
+	display: inline-block;
+}
+table tr td:first-child a.selected span:last-child {
+	display: none;
+}
+table td a.selected {
+	background-color: #676;
+}
+
+table td:not(:first-child) a span {
+	color: white;
+	display: none;
+}
+table td:not(:first-child) a span.shift {
+	margin-left: -4px;
+}
+table td:not(:first-child) a:hover span, 
+table td:not(:first-child) a.selected span {
+	display: inline;
+}
+
+table.vertical {
+	transform: rotate(90deg);
+	position: relative;
+}
+table.vertical td span {
+	transform: rotate(-90deg);
+}
+
+table.left {
+	transform: rotate(180deg);
+	transform: scale(-1, 1);
+}
+table.left td span {
+	transform: scale(-1, 1);
+}
+table.left td a {
+	box-shadow: -1px 1px 2px black;
+}
+table.left td:nth-child(n+3) a:hover span:not(.shift), 
+table.left td:nth-child(n+3) a.selected span:not(.shift) {
+  margin-left: -1px;
+}
+table.left td:nth-child(n+3) a:hover span.shift, 
+table.left td:nth-child(n+3) a.selected span.shift {
+  margin-left: -5px;
+}
+
+#footer {
+	text-align: center;
+	margin: 80px auto;
+	position: relative;
+}
+
+@media (hover: hover) {
+	table td a:hover {
+		opacity: 0.75;
+		background-color: #676;
+	}
+	
+	form #options input[type=button]:hover, 
+	form #options input[type=reset]:hover {
+		color: black;
+		background-color: white;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	body {
+		font-size: 14px;
+		margin: 0 auto;
+	}
+	
+	form {
+		height: auto;
+	}
+	form .message#logo, 
+	form .message#output {
+		display: block !important;
+		text-align: center !important;
+		margin: 0 auto;
+		padding: 10px 0;
+	}
+	form .message#logo {
+		margin-bottom: 10px;
+		position: relative;
+		left: -15px;
+	}
+	form .message#logo small {
+		margin: -4px 0 0 48px;
+	}
+	form .message#output span {
+		margin: 0 5px;
+	}
+	form #options {
+		left: 0;
+	}
+	
+	/*#footer {
+		padding-right: 50px;
+		margin-top: -100px;
+	}*/
+}
+
+@media screen and (max-width: 1020px) {
+	body, form, #wrapper {
+		font-size: 12px;
+		margin: 0 auto;
+	}
+	#wrapper {
+		max-width: 350px;
+	}
+	
+	form .message#logo big {
+		font-size: 18px !important;
+	}
+	form .message#logo small {
+		margin: 2px 0 0 -2px;
+	}
+	form hr {
+		display: block !important;
+		margin: 4px;
+    border: 0;
+	}
+	
+	label[for=display],
+	select[name=display] {
+		display: none;
+	}
+	input[type=button], 
+	input[type=reset] {
+		font-size: smaller;
+		margin-top: 2px;
+	}
+	
+	/*#footer {
+		padding-right: 0;
+		margin-right: -20px;
+	}*/
+}
