@@ -298,6 +298,13 @@ function ask() {
 	return false;
 }
 
+function faq() {
+	for (f = 0; f < faqs.length; f++) {
+		$("#faq dl").append('<dt>' + faqs[f]["q"] + '</dt>');
+		$("#faq dl").append('<dd>' + faqs[f]["a"] + '</dd>');
+	}
+}
+
 function msg() {
 	$("#output").html("<big>" + $("#output").attr("data-default") + "</big>");
 }
@@ -308,6 +315,8 @@ $(document).ready(function() {
 	tune();
 
 	update(true);
+	
+	faq();
 });
 
 $(window).on("resize", function() {

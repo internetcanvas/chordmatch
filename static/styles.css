@@ -220,6 +220,18 @@ table.left td:nth-child(n+3) a.selected span.shift {
 	text-align: center;
 	margin: 80px auto;
 	position: relative;
+	padding-bottom: 40px;
+}
+
+#faq {
+	text-align: left;
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+}
+#faq dl dt {
+	margin-top: 10px;
+	font-weight: bold;
 }
 
 @media (hover: hover) {
