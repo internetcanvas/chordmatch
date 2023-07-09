@@ -4,6 +4,10 @@
 		<title>ChordMatch Beta</title>
 		
     <meta charset="UTF-8">
+
+	<meta name="description" content="ChordMatch: a reverse chord lookup tool for any stringed instrument.">
+	<meta name="keywords" content="chord, match, lookup, chord match, chordmatch, chord lookup, reverse chord lookup, alternate tunings, extended range, guitar">
+
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
 		
 		<link rel="stylesheet" type="text/css" href="static/styles.css?2021051003" />
@@ -12,8 +16,8 @@
     
     <script type="text/javascript" src="static/scripts.js?2021051002"></script>
     
-    <script type="text/javascript" src="static/tunings.js?2021030701"></script>
-    <script type="text/javascript" src="static/faqs.js?2021051002"></script>
+    <script type="text/javascript" src="static/tunings.js?2023070801"></script>
+    <script type="text/javascript" src="static/faqs.js?2023070801"></script>
     
     <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,10 +44,10 @@
 					</select>
 			
 					<label for="strings">Strings</label>
-					<input type="number" name="strings" value="6" size="5" min="3" max="8" pattern="\d*" onchange="tune();" />
+					<input type="number" name="strings" value="6" size="5" min="2" max="10" pattern="\d*" onchange="tune();" />
 			
 					<label for="frets">Frets</label>
-					<input type="number" name="frets" value="8" size="5" min="4" max="24" pattern="\d*" />
+					<input type="number" name="frets" value="8" size="5" min="4" max="32" pattern="\d*" />
 			
 					<label for="offset">Capo</label>
 					<input type="number" name="offset" value="0" size="5" min="0" max="11" pattern="\d*" />
