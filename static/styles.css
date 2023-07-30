@@ -65,6 +65,11 @@ form .message#output span {
 	border-radius: 5px;
 }
 
+form .message#output span a {
+	text-decoration: none;
+	color: white;
+}
+
 form #options {
 	display: inline-block;
 	background-color: #dedede;

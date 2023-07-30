@@ -13,6 +13,10 @@ faqs = [
 		"a": "Click on or tap the circles in the position where your fingers are. You'll see the notes played and the chord name, if any. Remember to include open strings."
 	},
 	{
+		"q": "Can I capture my progression?",
+		"a": "Yes. Once a chord is recognized, click on its name to add it to the log at the bottom. You can view and copy your whole progression from there."
+	},
+	{
 		"q": "What chords are supported?",
 		"a": "It currently recognizes 40 different chord qualities. It can also identify slash chords, where you're playing an alternate root note."
 	},
@@ -22,6 +26,6 @@ faqs = [
 	},
 	{
 		"q": "What's coming next?",
-		"a": "We're working on saving individual settings, capturing chord progressions, and audio note detection. If you have suggestions, please send them our way."
+		"a": "We're working on saving individual settings and audio note detection. If you have suggestions, please send them our way."
 	}
 ];

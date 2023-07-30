@@ -96,16 +96,39 @@ function clicked(e = false) {
 	//if (arr.filter(val => val !== "-1").length >= 2) {
 	if ($("td a.selected").length > 1) {
 		lookup = $.get("/lookup?" + app, function(text) {
-			text = text.replace(/\'/g, "").replace(/\[|\]/g, ""); //.replace(/\,/g, ",<br>");
-			result = "<span>" + text.replace(/\,/g, "</span><span>").replace(/^$/, "None") + "</span>";
+			text = text.replace(/\'/g, "").replace(/\[|\]/g, "");
 			
 			//if ($("td a.selected").length > 1) {
-				$("#output").html("<big>" + result + "</big>");
+				$("#output").html("<big>" + link(text) + "</big>");
 			//}
 		});
 	} else msg();
 	
 	return false;
+}
+
+function link(result) {
+	click = "log(this);";
+	title = "Add to log";
+
+	result = "<span>" + result.replace(/\,/g, "</span><span>").replace(/^$/, "None") + "</span>";
+	result = result.replace(/\<span\>/g, '<span><a href="#" onclick="' + click + '" title="' + title + '">');
+	result = result.replace(/\<\/span\>/g, '</a></span>');
+	
+	return result;
+}
+
+function log(chord) {
+	elem = $("#log textarea");
+	curr = elem.val();
+	curr += $(chord).text().trim() + "\n";
+	elem.val(curr);
+	elem.scrollTop(elem[0].scrollHeight);
+}
+
+function copy() {
+	$("#log textarea").select()
+	document.execCommand("copy");
 }
 
 function active() {
