@@ -14,7 +14,7 @@
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     
-    <script type="text/javascript" src="static/scripts.js?2023073001"></script>
+    <script type="text/javascript" src="static/scripts.js?2024012601"></script>
     
     <script type="text/javascript" src="static/tunings.js?2023070801"></script>
     <script type="text/javascript" src="static/faqs.js?2023072901"></script>
@@ -97,7 +97,8 @@
 		
 		<div id="footer">
 			<div id="log">
-				<textarea placeholder="Log" rows="4"></textarea><br />
+				<input type="checkbox" name="notes"> Log notes<br />
+				<textarea placeholder="Log" rows="4" cols="44"></textarea><br />
 				<a href="#" onclick="$('#log textarea').val(''); return false;">clear</a>
 				| <a href="#" onclick="copy(); return false;">copy</a>
 			</div>
@@ -106,6 +107,7 @@
 				&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
 				| <a href="mailto:mail@chordmatch.com">Contact</a>
 				| <a href="#" onclick="$('#faq').slideToggle(); return false;">FAQ</a>
+				| <a href="https://github.com/internetcanvas/chordmatch" target="_blank">Source</a>
 			</p>
 			
 			<div id="faq" style="display: none;">

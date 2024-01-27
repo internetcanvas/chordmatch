@@ -121,7 +121,8 @@ function link(result) {
 function log(chord) {
 	elem = $("#log textarea");
 	curr = elem.val();
-	curr += $(chord).text().trim() + "\n";
+	if ($("input[name=notes]").is(":checked")) curr += $(chord).text().trim() + " [" + active(true).toString().replaceAll(",", ", ") + "]\n";
+	else curr += $(chord).text().trim() + "\n";
 	elem.val(curr);
 	elem.scrollTop(elem[0].scrollHeight);
 }
@@ -131,11 +132,13 @@ function copy() {
 	document.execCommand("copy");
 }
 
-function active() {
+function active(notes = false) {
 	arr = [];
-	$("a.selected").each(function() {
-		arr[$(this).attr("data-string") - 1] = $(this).attr("data-fret");
+	$("a.selected").each(function(i) {
+		if (notes) arr[i] = ($(this).attr("data-string")) + ": " + $(this).children("span").html();
+		else arr[$(this).attr("data-string") - 1] = $(this).attr("data-fret");
 	});
+	if (notes) arr.reverse();
 	return arr;
 }
 
