@@ -38,6 +38,7 @@ tunings = {
 		{"notes": ['db','ab','db','gb','bb','eb'], "name": "1/2 Step Drop Db"},
 		{"notes": ['b','e','a','d','f#','b'], "name": "Baritone"},
 		{"notes": ['a','e','a','d','f#','b'], "name": "Baritone Drop A"},
+		{"notes": ['g','e','a','d','f#','b'], "name": "Baritone Drop G"},
 		{"notes": ['f#','b','e','a','d','g'], "name": "6 String Bass Low"},
 		{"notes": ['b','e','a','d','g','c'], "name": "6 String Bass High"},
 		{"notes": ['f','c','g','d','a','e'], "name": "6 String Cello"}
@@ -48,7 +49,7 @@ tunings = {
 		{"notes": ['bb','eb','ab','db','gb','bb','eb'], "name": "1/2 Step Down"},
 		{"notes": ['ab','eb','ab','db','gb','bb','eb'], "name": "1/2 Step Drop Ab"},
 		{"notes": ['f#','b','e','a','d','f#','b'], "name": "7 String Baritone"},
-		{"notes": ['e','a','e','a','d','f#','b'], "name": "7 String Baritone Drop E"},
+		{"notes": ['e','b','e','a','d','f#','b'], "name": "7 String Baritone Drop E"},
 		{"notes": ['e','a','d','g','b','e','a'], "name": "7 String High"}
 	], 
 	"8": [

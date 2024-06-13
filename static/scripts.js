@@ -191,14 +191,14 @@ function fret(y, x, r) {
 	scale = 25.5;
 	ratio = 17.817;
 	
-	start = y;
+	offset = y;
 	if (parseInt($("input[name=offset]").val()) >= 1) {
-		start += parseInt($("input[name=offset]").val());
+		offset += parseInt($("input[name=offset]").val());
 	}
 	
 	extra = "";
 	if (r == x) {
-		extra += '<span>' + start.toString() + '</span>';
+		extra += '<span>' + offset.toString() + '</span>';
 	}
 	
 	notes = pretty($("select[name=tuning]").val());
@@ -214,8 +214,9 @@ function fret(y, x, r) {
 	
 	t = ""
 	if (y == 0) {
-		t += '<span>' + notes[x - 1] + '</span>'
-		t += '<span>&times;</span>'
+		//t += '<span>' + notes[x - 1] + '</span>';
+		t += note(x, offset);
+		t += '<span>&times;</span>';
 	}
 	
 	style = 'style="';
@@ -223,8 +224,10 @@ function fret(y, x, r) {
 	if (x > 0) style += 'border-bottom-width: ' + ((r - x) + 3) + 'px;';
 	style += '"';
 	
+	console.log(x, offset, t);
+
 	if (x == 0) html = '<td ' + style + '></td>';
-	else html = '<td ' + style + '>' + extra + btn(x, start, t) + '</td>';
+	else html = '<td ' + style + '>' + extra + btn(x, offset, t) + '</td>';
 	
 	return html;
 }
