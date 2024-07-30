@@ -221,6 +221,11 @@ table.left td:nth-child(n+3) a.selected span.shift {
   margin-left: -5px;
 }
 
+#log textarea {
+	width: 75%;
+	max-width: 800px;
+}
+
 #footer {
 	text-align: center;
 	margin: 80px auto;

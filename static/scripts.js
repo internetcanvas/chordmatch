@@ -121,8 +121,10 @@ function link(result) {
 function log(chord) {
 	elem = $("#log textarea");
 	curr = elem.val();
-	if ($("input[name=notes]").is(":checked")) curr += $(chord).text().trim() + " [" + active(true).toString().replaceAll(",", ", ") + "]\n";
-	else curr += $(chord).text().trim() + "\n";
+	if ($("input[name=notes]").is(":checked")) {
+		notes = active(true).toString().replaceAll(",", ", ");
+		curr += $(chord).text().trim() + " [" + notes + "]\n";
+	} else curr += $(chord).text().trim() + "\n";
 	elem.val(curr);
 	elem.scrollTop(elem[0].scrollHeight);
 }
@@ -135,8 +137,10 @@ function copy() {
 function active(notes = false) {
 	arr = [];
 	$("a.selected").each(function(i) {
-		if (notes) arr[i] = ($(this).attr("data-string")) + ": " + $(this).children("span").html();
-		else arr[$(this).attr("data-string") - 1] = $(this).attr("data-fret");
+		if (notes) {
+			arr[i] = ($(this).attr("data-string")) + ": ";
+			arr[i] += $(this).children("span").html() + " " + $(this).attr("data-fret");
+		} else arr[$(this).attr("data-string") - 1] = $(this).attr("data-fret");
 	});
 	if (notes) arr.reverse();
 	return arr;
